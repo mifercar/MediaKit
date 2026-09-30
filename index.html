@@ -49,6 +49,19 @@ h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:1.4rem}
 .stat b{display:block;font:400 clamp(2.3rem,6vw,3.4rem)/1 "Instrument Serif",Georgia,serif;color:var(--rose)}
 .stat span{color:var(--soft);font-size:.95rem;display:block;margin-top:.3rem}
 .note{color:var(--soft);font-size:.85rem;margin-top:1.4rem}
+/* Desktop only: manifesto + stats layout (mobile untouched) */
+@media(min-width:800px){
+.manifesto .two{grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.manifesto .pull{font-size:clamp(2.6rem,4.4vw,4rem);line-height:1.08;max-width:13ch}
+.manifesto .prose p{font-size:1.15rem;line-height:1.7;max-width:34em}
+.manifesto .big{margin-top:3.5rem}
+.manifesto .stats{gap:0;border-top:1px solid var(--line);padding-top:2.2rem;align-items:start}
+.manifesto .stat{padding:0 1.6rem;border-left:1px solid var(--line)}
+.manifesto .stat:first-child{padding-left:0;border-left:0}
+.manifesto .stat b{font-size:clamp(2rem,3.6vw,3.4rem);white-space:nowrap}
+.manifesto .stat span{max-width:16em}
+.manifesto .note{margin-top:2rem}
+}
 .big{margin-top:2.5rem}
 .reels{display:grid;gap:.9rem;margin-top:1.6rem}
 @media(min-width:800px){.reels{grid-template-columns:repeat(3,1fr)}}
@@ -211,7 +224,7 @@ a{text-decoration:none}
   </div>
 </section>
 
-<section>
+<section class="manifesto">
   <div class="wrap two">
     <div><p class="pull">Carnaval é aquilombamento.</p></div>
     <div class="prose">
